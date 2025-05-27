@@ -133,7 +133,8 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({
                 htmlFor="transparent"
                 className="text-sm cursor-pointer hover:text-purple-300 transition-all duration-200 select-none"
               >
-                Transparent mode
+                Transparent mode{" "}
+                <span className="text-xs text-neutral-400">(work in progress)</span>
               </label>
             </div>
           </div>

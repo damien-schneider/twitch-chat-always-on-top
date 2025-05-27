@@ -14,15 +14,8 @@ const ChatViewer = ({
 
     // Sanitize the channel name for the iframe URL
     const sanitizedChannel = channel.replace(/\W/g, "");
-    const baseUrl = `https://www.twitch.tv/embed/${sanitizedChannel}/chat?parent=localhost&darkpopout`;
-
-    // Add transparency-related parameters when in transparent mode
-    if (transparent) {
-      return `${baseUrl}&transparent=true`;
-    }
-
-    return baseUrl;
-  }, [channel, transparent]);
+    return `https://www.twitch.tv/embed/${sanitizedChannel}/chat?parent=localhost&darkpopout`;
+  }, [channel]);
 
   if (!channel) {
     return (

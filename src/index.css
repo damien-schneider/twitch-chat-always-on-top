@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
-/* Transparency styles */
+/* Base transparency for Tauri blur to show through */
+html, body, #root {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Transparency styles - let Tauri handle the blur */
 .transparent-mode {
   background: transparent !important;
-  backdrop-filter: blur(10px);
 }
 
 .transparent-mode iframe {
@@ -14,7 +19,6 @@
 /* Better transparency handling for the app container */
 .transparent-mode .app-container {
   background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(20px);
   border-radius: 8px;
 }
 
